@@ -6,11 +6,7 @@ controller("staffController", ["$scope", "$http", function($scope, $http) {
   $scope.filter  = ""
 
   $scope.title_for = function(member) {
-    if (member.current_course) {
-      return member.current_course.topic
-    } else {
-      return member.title
-    }
+    return member.title
   }
 
   $scope.toggleSort = function(field) {
